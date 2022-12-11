@@ -1,0 +1,7 @@
+{
+  "name": "ionicMarvelAPItut",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
