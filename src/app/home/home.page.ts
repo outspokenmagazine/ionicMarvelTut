@@ -17,16 +17,27 @@ export class HomePage {
   }
 
   async loadCharacters() {
-    this.marvelapi.getCharacters().subscribe(
-      (res) => {
+    this.marvelapi.getCharacters().subscribe({
+      next: (res: ApiWrapperCharaterResponse) => {
         this.apiResult = res;
         console.log(this.apiResult.data.results);
         this.characters = this.apiResult.data.results;
       },
-      (err) => {
-        console.log(err);
-      }
-    );
+      error: (e) => console.error(e),
+      complete: () => console.info('complete')
+    })
+
+/*example https://rxjs.dev/deprecations/subscribe-arguments
+
+of([1,2,3]).subscribe({
+  next: (v) => console.log(v),
+  error: (e) => console.error(e),
+  complete: () => console.info('complete')
+})
+
+*/
+
+
   }
 
 }
