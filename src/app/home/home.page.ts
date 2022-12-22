@@ -43,7 +43,7 @@ export class HomePage {
           this.characters.push(receivedCharacter);
         });
 
-        this.offset = this.offset + this.limit;
+        this.offset = offset + limit;
       },
       error: (e) => console.error(e),
       complete: () => console.info('complete')
