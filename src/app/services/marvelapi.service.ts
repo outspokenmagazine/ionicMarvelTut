@@ -70,9 +70,9 @@ export class MarvelapiService {
   this.hash = MD5( this.ts + environment.apiSecret + environment.apiKey );
   }
 
-  getCharacters(): Observable<ApiWrapperCharaterResponse> {
+  getCharacters(offset: number,limit: number ): Observable<ApiWrapperCharaterResponse> {
     return this.http.get<ApiWrapperCharaterResponse>(
-      `${environment.apiUrl}characters?apikey=${environment.apiKey}&hash=${this.hash}&ts=${this.ts}`
+      `${environment.apiUrl}characters?apikey=${environment.apiKey}&hash=${this.hash}&ts=${this.ts}&offset=${offset}&limit=${limit}`
     );
   }
 
