@@ -27,7 +27,7 @@ export class HomePage {
 
 
   loadMore(){
-    this.loadCharacters(this.offset+this.limit, this.limit);
+    this.loadCharacters(this.offset, this.limit);
   }
 
   loadCharacters(offset: number, limit: number) {
