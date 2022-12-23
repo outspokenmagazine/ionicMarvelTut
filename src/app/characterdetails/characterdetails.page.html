@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()" ><ion-icon name="arrow-back"></ion-icon></ion-button>
+  </ion-buttons>
+    <ion-title>characterdetails</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item>Option 1: {{characterId}}</ion-item>
+
+<ion-item>Option 2: {{character.id}} {{character.name}}</ion-item>
+</ion-content>

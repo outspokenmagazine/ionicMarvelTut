@@ -64,6 +64,9 @@ export class MarvelapiService {
   hash!: any;
   ts = new Date().getTime();
 
+  // for Option 2 passing an object around while routing
+  currentCharacter!: Character;
+
   constructor(
     private http: HttpClient
   ) {

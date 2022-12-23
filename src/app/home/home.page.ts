@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiWrapperCharaterResponse, Character, MarvelapiService } from '../services/marvelapi.service';
 
 @Component({
@@ -8,6 +9,7 @@ import { ApiWrapperCharaterResponse, Character, MarvelapiService } from '../serv
 })
 export class HomePage {
 
+
   apiResult!: ApiWrapperCharaterResponse;
   characters: Character[] = [];
 
@@ -16,7 +18,10 @@ export class HomePage {
 
 
 
-  constructor(private marvelapi: MarvelapiService) {}
+  constructor(
+    private marvelapi: MarvelapiService,
+    private router: Router
+    ) {}
 
 
   ngOnInit() {
@@ -61,5 +66,20 @@ of([1,2,3]).subscribe({
 
 
   }
+
+
+
+  openCharacter(character: Character){
+    console.log('Home Page log: ')
+    console.log(character);
+    console.log('Home Page log Option 1: '+ character.id);
+    // Option 1
+    this.router.navigate(['/characterdetails/' + character.id]);
+
+    // Option 2
+    this.marvelapi.currentCharacter = character;
+  }
+
+
 
 }
