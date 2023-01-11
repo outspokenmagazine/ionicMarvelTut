@@ -14,7 +14,7 @@ export class HomePage {
   characters: Character[] = [];
 
   offset: number  = 0;
-  limit: number = 5;
+  limit: number = 8;
 
 
 
@@ -44,8 +44,11 @@ export class HomePage {
         // this.characters = this.apiResult.data.results;
 
         this.apiResult.data.results.forEach(receivedCharacter => {
-          console.log(receivedCharacter);
-          this.characters.push(receivedCharacter);
+          console.log(receivedCharacter.thumbnail.path);
+          if(!receivedCharacter.thumbnail.path.includes('image_not_available')){
+            this.characters.push(receivedCharacter);
+          }
+
         });
 
         this.offset = offset + limit;

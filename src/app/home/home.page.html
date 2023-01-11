@@ -1,25 +1,41 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Marvel Superheroes
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-button  expand="block" (click)='loadMore()'>Load More</ion-button>
-  <ion-list>
-    <ion-item button *ngFor="let character of characters" (click)="openCharacter(character)">
-      <ion-avatar slot="start">
-        <img [src]="character.thumbnail.path + '.' + character.thumbnail.extension" />
-      </ion-avatar>
 
-      <ion-label class="ion-text-wrap">
-        <h3>{{ character.name }}</h3>
-        <p>{{ character.description}}</p>
-      </ion-label>
 
-      <ion-badge slot="end"> {{ character.comics.available }} </ion-badge>
-    </ion-item>
-  </ion-list>
+
+
+
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col full size-xs="6" size-sm="3" size-md="3" *ngFor="let character of characters; let i = index">
+
+
+          <ion-card full class="ion-no-margin ion-no-padding">
+              <div >
+                <ion-img tappable (click)="openCharacter(character)" [src]="character.thumbnail.path + '.' + character.thumbnail.extension"></ion-img>
+                <div class="like">
+                  <!--<fa-icon [icon]="['fas','heart']"></fa-icon>-->
+                  <!--<fa-icon (click)="toggleLike(photo)" *ngIf="photo?.my_like" [icon]="['fas','heart']"></fa-icon>
+                  <fa-icon (click)="toggleLike(photo)" *ngIf="!photo?.my_like" [icon]="['far','heart']"></fa-icon>-->
+                </div>
+              </div>
+              <ion-card-header (click)="openCharacter(character)">
+                <ion-card-title class="title">{{ character.name }}</ion-card-title>
+                <ion-card-subtitle class="subtitle">{{ character.description}}</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-button color="marvel" expand="full" (click)='loadMore()'>Load More</ion-button>
+  </ion-grid>
+
 </ion-content>

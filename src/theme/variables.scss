@@ -11,6 +11,16 @@
   --ion-color-primary-shade: #3171e0;
   --ion-color-primary-tint: #4c8dff;
 
+ /*marvel*/
+  --ion-color-marvel: #ed1d24;
+  --ion-color-marvel-rgb: 237,29,36;
+  --ion-color-marvel-contrast: #ffffff;
+  --ion-color-marvel-contrast-rgb: 255,255,255;
+  --ion-color-marvel-shade: #d11a20;
+  --ion-color-marvel-tint: #ef343a;
+
+
+
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
   --ion-color-secondary-rgb: 61, 194, 255;
@@ -153,8 +163,8 @@
    */
 
   .ios body {
-    --ion-background-color: #000000;
-    --ion-background-color-rgb: 0,0,0;
+    --ion-background-color: #121212;
+    --ion-background-color-rgb: 18,18,18;
 
     --ion-text-color: #ffffff;
     --ion-text-color-rgb: 255,255,255;

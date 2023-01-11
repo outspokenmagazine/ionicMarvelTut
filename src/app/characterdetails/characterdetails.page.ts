@@ -25,6 +25,13 @@ character!: Character;
   ngOnInit() {
     // Option 1
     this.characterId = this.route.snapshot.paramMap.get('characterId');
+
+
+
+
+
+
+    
     console.log('Character Details Page log Option 1: '+ this.characterId);
 
     // Option 2

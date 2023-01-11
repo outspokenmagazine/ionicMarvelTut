@@ -1,27 +1,94 @@
-#container {
+#male, #female {
+  color: white;
+}
+
+#toggle {
+  padding: 0px 3px 0px 3px;
+  color: #dc6666;
+  font-size: 15px !important;
+}
+
+#toggle-to-male, #toggle-to-female {
+  color: #dc6666;
+  font-size: 20px !important;
+}
+
+.title , .subtitle {
+  margin:0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 14px;
+  color:white;
+}
+
+.subtitle {
+  font-size: 10px;
+  color:#ccc;
+
+
+}
+
+.wallcardheader {
+  padding:0px;
+}
+
+ion-img{
+  min-height:2px;
+}
+
+h4 {
+  padding-left:8px;
+  padding-bottom:8px;
+}
+
+.comment_label {
+  overflow: unset;
+  white-space: unset;
+}
+
+.like{
+  padding:5px;
+  position:absolute;
+  top:0;
+  right:0;
+  color:#760000;
+}
+
+.icon-2x {
+  font-size: 2rem!important;
+}
+
+h6 {
+  padding-top: 40%;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  color: #c0c5ce;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+/*
+ion-avatar{
+  max-height:30px;
+  max-width: 30px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-card-header {
+  padding:0px;
 }
 
-#container a {
-  text-decoration: none;
+@media (max-width: 370px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}*/
+
+ion-button{
+  background-color: #ed1d24 !important;
+}
+
+ion-card{
+  background-color: #6666;
+  color:#c0c5ce;
 }

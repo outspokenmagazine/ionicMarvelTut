@@ -24,3 +24,279 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+
+html {
+  background-color: black;
+}
+
+i {
+  font-size: 1.5rem!important;
+}
+
+fa-icon {
+  font-size: 1.5rem!important;
+}
+
+app-tabs {
+  background-color: white;
+}
+
+app-add-to-wall, app-photo-edit, app-upload {
+  canvas {
+    max-width: 100%;
+  }
+  img.display-no-filter {
+   // display: none !important;
+  }
+}
+
+* {
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  user-select: auto !important;
+  }
+
+
+ion-header{
+  box-shadow:
+  0 0 10px 10px rgba(0, 0, 0, 0.2),
+  0 0px 10px rgba(0, 0, 0, 0.24);
+}
+
+ion-menu-button, ion-menu-button > ion-button > i, ion-back-button > button > span > ion-icon {
+  color:#eeeeee!important;
+}
+
+/*ion-button {
+  color:#760000!important;
+}*/
+
+ion-toolbar > ion-title {
+  color: #eeeeee;
+  text-align: center;
+}
+ion-header > ion-toolbar {
+  --background: #ed1d24;
+}
+
+.alert-message{
+  white-space: pre-wrap!important;
+  max-height:450px!important;
+  text-align:left!important;
+}
+
+.customAlert{
+  --height:380px;
+  textarea{
+      height: 200px;
+  }
+}
+
+.modal-wrapper{
+  //width: 100%!important;
+  //border-radius:0px!important;
+  height: 100%!important;
+  border-radius: 0px;
+
+
+  @media (min-width: 992px) {
+    background-color: transparent!important;
+    width:70%!important;
+    max-width:1000px!important;
+    height:80%!important;
+    max-height:705px!important;
+  }
+
+
+}
+
+ion-header {
+ion-toolbar {
+  @media (min-width: 992px) {
+    min-height: 50px;
+  }
+}
+}
+
+ion-backdrop{
+  --backdrop-opacity: 75%!important;
+}
+// test
+
+// Screen size hidden
+.invisible {
+  visibility: hidden !important;
+}
+
+.hidden-xs-up {
+  display: none !important;
+}
+
+@media (max-width: 575px) {
+  .hidden-xs-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .hidden-sm-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hidden-sm-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: 767px) {
+  .hidden-md-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .hidden-md-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .hidden-lg-up {
+    display: none !important;
+  }
+}
+
+
+
+@media (min-width: 576px) {
+  body {
+      // background: #000000 url('assets/back.jpg')
+      background: #000000
+  }
+
+  ion-split-pane {
+    max-width:1170px;
+    margin: auto auto;
+  }
+
+
+}
+
+
+@media (min-width: 992px) {
+  app-photoslider{
+    // max-height:690px;
+ }
+}
+
+
+// General styling
+ion-content {
+  --offset-top: 0px;
+  position: absolute;
+
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: large;
+}
+
+ion-slides {
+  margin-top: 4px;
+}
+
+.continue {
+  background: #191919;
+}
+
+// Progress bar inside slides
+.progress-bar {
+  height: 2px;
+  width: 100%;
+  background: #262626;
+
+  .progress {
+    background: #E40A15;
+    height: 100%;
+  }
+}
+
+// Spotlight section with gradient background
+.spotlight {
+  width: 100%;
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 20px;
+  position: relative;
+
+  // Image overlay gradient
+  .gradient {
+    background: linear-gradient(#ffffff00 40%, #000000c2, #000 95%);
+    width: 100%;
+    height: 100%;
+  }
+
+  .info {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+
+    img {
+      max-width: 50%;
+    }
+
+    .rating {
+      display: block;
+      font-weight: 700;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    // Action button row
+    .btn-vertical {
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-play {
+      background: #fff;
+      font-weight: 500;
+      border-radius: 2px;
+      color: #000;
+      padding: 4px;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+// Header area
+.logo {
+  margin-left: 16px;
+  width: 20px;
+}
+
+ion-toolbar {
+  --background: linear-gradient(180deg, rgba(0, 0, 0, 0.8715861344537815) 0%, rgba(0, 0, 0, 0.8463760504201681) 57%, rgba(0, 0, 0, 0.6923144257703081) 80%, rgba(0, 0, 0, 0.5438550420168067) 89%, rgba(0, 0, 0, 0) 100%);
+}
+
+ion-grid{
+  margin-top:40px;
+  background-color: #000 !important;
+
+}
+
+
